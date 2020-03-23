@@ -525,3 +525,10 @@ def swap(plotter,xlim=None,ylim=None):
     axs.set(xlim = nxlim, ylim = nylim, xlabel = nxlabel, ylabel = nylabel)
     axs.autoscale_view()
     return fig
+
+def texify_orbs(s):
+    s = str(s)
+    if '_' in s:
+        s = s.replace('_','_{') + '}'
+    s = '$' + s + '$'
+    return s
